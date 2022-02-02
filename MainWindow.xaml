@@ -1,0 +1,84 @@
+﻿<Window
+    x:Class="CyfryRzymskie.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:CyfryRzymskie"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="Cyfry Rzymskie"
+    Width="550"
+    Height="175"
+    Background="#FF4B4B4B"
+    FontFamily="Times New Roman"
+    FontSize="18"
+    Foreground="White"
+    mc:Ignorable="d">
+    <Grid ShowGridLines="False">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="3" />
+            <RowDefinition Height="*" />
+
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200" />
+            <ColumnDefinition Width="150*" />
+            <ColumnDefinition Width="150" />
+        </Grid.ColumnDefinitions>
+        <Label
+            Name="lblFirst"
+            Grid.Row="0"
+            Grid.Column="0"
+            Margin="5"
+            Content="Wpisz cyfrę"
+            Foreground="White" />
+
+
+
+        <TextBox
+            Name="txtCyfra"
+            Grid.Row="0"
+            Grid.Column="1"
+            Margin="5"
+            TextChanged="txtCyfra_TextChanged" />
+        <TextBox
+            Name="txtRzymska"
+            Grid.Row="1"
+            Grid.Column="1"
+            Margin="5"
+            IsEnabled="False"
+            Text="..."
+            TextChanged="txtRzymska_TextChanged" />
+
+        <Button
+            Grid.Row="0"
+            Grid.RowSpan="2"
+            Grid.Column="2"
+            Margin="5"
+            Click="Button_Click"
+            Content="Zamień" />
+        <Label
+            Name="lblSecond"
+            Grid.Row="1"
+            Grid.Column="0"
+            Margin="5"
+            Content="Wpisz cyfrę rzymską"
+            Foreground="White"
+            Visibility="Hidden" />
+        <Rectangle
+            Grid.Row="2"
+            Grid.Column="0"
+            Grid.ColumnSpan="3"
+            Fill="#424242"
+            Stroke="#424242" />
+
+        <Label
+            Name="lblPodpis"
+            Grid.Row="3"
+            Grid.Column="0"
+            Content="Maciej Kuchcik   2021"
+            FontSize="17"
+            FontStyle="Italic" />
+    </Grid>
+</Window>
